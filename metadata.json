@@ -1,0 +1,6 @@
+{
+  "name": "AuraEdu - Course Simplifier & Audio Quizzer",
+  "description": "Simplifies complex university course content into jargon-free summaries, explained audio study segments in local languages, and interactive quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
