@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
             <p className="text-xs text-slate-500 hidden sm:block">
-              University Course Simplifier & Audio Quizzer
+              University Course Simplifier & Audio Explaination
             </p>
           </div>
         </div>
