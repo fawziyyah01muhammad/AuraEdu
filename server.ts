@@ -5,7 +5,7 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json({ limit: "500mb" }));
 
@@ -428,7 +428,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "localhost", () => {
+  app.listen(PORT, "0.0.0.0", () =>{
     console.log(`AuraEdu server listening on http://localhost:${PORT}`)
   });
 }
