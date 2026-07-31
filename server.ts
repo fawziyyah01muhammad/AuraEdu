@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
@@ -6,7 +7,7 @@ import { GoogleGenAI, Type, Modality } from "@google/genai";
 const app = express();
 const PORT = 3000;
 
-app.use(express.json({ limit: "50mb" }));
+app.use(express.json({ limit: "500mb" }));
 
 // Initialize Google GenAI
 const ai = new GoogleGenAI({
@@ -427,9 +428,10 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`UniGist server listening on http://0.0.0.0:${PORT}`);
+  app.listen(PORT, "localhost", () => {
+    console.log(`AuraEdu server listening on http://localhost:${PORT}`)
   });
 }
+console.log("KEY:", process.env.GEMINI_API_KEY);
 
 startServer();
